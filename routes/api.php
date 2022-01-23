@@ -14,6 +14,7 @@ Route::prefix('games')->group(function(){
     Route::post('/', [GameController::class, 'store']);
     Route::get('/{game}', [GameController::class, 'show']);
     Route::put('/{game}', [GameController::class, 'update']);
+    Route::delete('/{game}/delete', [GameController::class, 'destroy']);
 });
 
 /*
