@@ -10,7 +10,8 @@ use App\Http\Controllers\GameController;
 |--------------------------------------------------------------------------
 */
 Route::prefix('games')->group(function(){
-    route::get('/', [GameController::class, 'index']);
+    Route::get('/', [GameController::class, 'index']);
+    Route::post('/', [GameController::class, 'store']);
 });
 
 /*

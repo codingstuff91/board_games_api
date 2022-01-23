@@ -26,7 +26,9 @@ class GameController extends Controller
      */
     public function store(StoreGameRequest $request)
     {
-        return $request->all();
+        $game = Game::create($request->all());
+        
+        return response($game, 201);
     }
 
     /**
