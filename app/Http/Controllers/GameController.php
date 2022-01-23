@@ -39,7 +39,7 @@ class GameController extends Controller
      */
     public function show(Game $game)
     {
-        //
+        return $game;
     }
 
     /**
@@ -51,7 +51,7 @@ class GameController extends Controller
      */
     public function update(UpdateGameRequest $request, Game $game)
     {
-        //
+        return $game->update($request->all());
     }
 
     /**
